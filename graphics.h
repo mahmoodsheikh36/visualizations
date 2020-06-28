@@ -51,3 +51,18 @@ void fillPixel(int x, int y, int r, int g, int b) {
     SDL_SetRenderDrawColor(renderer, r, g, b, 0x00);
     SDL_RenderDrawPoint(renderer, x, y);
 }
+
+void drawLine(int x1, int y1, int x2, int y2, int r, int g, int b) {
+    SDL_SetRenderDrawColor(renderer, r, g, b, 0x00);
+    SDL_RenderDrawLine(renderer, x1, y1, x2, y2);
+}
+
+void fillRect(double x, double y, double w, double h, int r, int g, int b) {
+    SDL_Rect rect;
+    rect.x = x;
+    rect.y = y;
+    rect.w = w;
+    rect.h = h;
+    SDL_SetRenderDrawColor(renderer, r, g, b, 0x00);
+    SDL_RenderFillRect(renderer, &rect);
+}
